@@ -30,5 +30,10 @@ namespace lab3
         {
             menu.RemoveAt(menu.FindIndex(m => m.name == name));           
         }
+
+        public static void AddSmetaProduct(List<Smeta> smeta, Smeta s)
+        {
+            smeta.Add(s);          
+        }
     }
 }

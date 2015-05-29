@@ -59,8 +59,30 @@ namespace UnitTestProject1
                 Assert.AreNotEqual(meal[i].name, "Картофель5");
                
 
-            }
-            
+            }            
+
+        }
+
+        [TestMethod]
+        public void TestAddSmetaProduct()
+        {
+            Menu m = new Menu();
+            Smeta s;
+            Food f;
+            List<Smeta> smeta1 = new List<Smeta>();
+                       
+            s = new Smeta();
+            f = new Food();
+            f.name = "Картофель";
+            f.price = 10;
+            s.smetaProduct = f;
+            s.count = 2;
+            Menu.AddSmetaProduct(smeta1, s);
+
+            Assert.AreEqual(smeta1[0].smetaProduct, f);
+            Assert.AreEqual(smeta1[0].count, 2);
+             
+
 
         }
     }
