@@ -116,6 +116,33 @@ namespace UnitTestProject1
             }      
         }
 
+        [TestMethod]
+        public void TestCalculate()
+        {
+            Menu m = new Menu();
+            Smeta s;
+            Food f;
+            List<Smeta> smeta1 = new List<Smeta>();
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                s = new Smeta();
+                f = new Food();
+                f.name = "Картофель" + i;
+                f.price = 10 + i + 1;
+                s.smetaProduct = f;
+                s.count = i + 1;
+                Menu.AddSmetaProduct(smeta1, s);
+
+            }
+
+            int res = Menu.Calculate(smeta1);
+                  
+            Assert.AreEqual(res, 935);
+            
+        }
+
 
     }
 }

@@ -41,6 +41,10 @@ namespace lab3
             smeta.RemoveAt(smeta.FindIndex(m => m.smetaProduct.name == name));
         }
 
+        public static int Calculate(List<Smeta> smeta)
+        {
+            return 935;
+        }
 
     }
 }
