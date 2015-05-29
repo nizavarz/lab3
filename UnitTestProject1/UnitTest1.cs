@@ -70,7 +70,7 @@ namespace UnitTestProject1
             Smeta s;
             Food f;
             List<Smeta> smeta1 = new List<Smeta>();
-                       
+
             s = new Smeta();
             f = new Food();
             f.name = "Картофель";
@@ -81,9 +81,41 @@ namespace UnitTestProject1
 
             Assert.AreEqual(smeta1[0].smetaProduct, f);
             Assert.AreEqual(smeta1[0].count, 2);
-             
 
 
         }
+
+        [TestMethod]
+        public void TestDeleteSmetaProduct()
+        {
+            Menu m = new Menu();
+            Smeta s;
+            Food f;
+            List<Smeta> smeta1 = new List<Smeta>();
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                s = new Smeta();
+                f = new Food();
+                f.name = "Картофель" + i;
+                f.price = 10 + i;
+                s.smetaProduct = f;
+                s.count = i;
+                Menu.AddSmetaProduct(smeta1, s);
+
+            }
+            
+            string name = "Картофель5";
+
+            Menu.DeleteSmetaProduct(smeta1, name);
+
+            for (int i = 0; i < smeta1.Count; i++)
+            {
+                Assert.AreNotEqual(smeta1[i].smetaProduct.name, "Картофель5");
+            }      
+        }
+
+
     }
 }

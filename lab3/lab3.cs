@@ -35,5 +35,12 @@ namespace lab3
         {
             smeta.Add(s);          
         }
+
+        public static void DeleteSmetaProduct(List<Smeta> smeta, string name)
+        {
+            smeta.RemoveAt(5);
+        }
+
+
     }
 }
