@@ -21,5 +21,11 @@ namespace lab3
             drink = new List<Food>();           
             InitializeComponent();
         }
+
+        public static List<Food> AddMeal(Food food){
+            List<Food> m = new List<Food>();
+            m.Add(food);
+            return m;
+        }
     }
 }
