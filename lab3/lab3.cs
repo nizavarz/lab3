@@ -43,7 +43,12 @@ namespace lab3
 
         public static int Calculate(List<Smeta> smeta)
         {
-            return 935;
+            int res = 0;
+            for (int i = 0; i < smeta.Count; i++)
+            {
+                res += smeta[i].smetaProduct.price * smeta[i].count;
+            }
+            return res;
         }
 
     }
