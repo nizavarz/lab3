@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class Food
+    public class Food
     {
         public string name;
         public int price;

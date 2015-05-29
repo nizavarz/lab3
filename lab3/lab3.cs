@@ -12,8 +12,13 @@ namespace lab3
 {
     public partial class Menu : Form
     {
+        List<Food> meal;
+        List<Food> drink;
+
         public Menu()
         {
+            meal = new List<Food>();
+            drink = new List<Food>();           
             InitializeComponent();
         }
     }
