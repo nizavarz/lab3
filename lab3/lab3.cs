@@ -28,7 +28,7 @@ namespace lab3
 
         public static void DeleteMeal(List<Food> menu, string name)
         {
-            menu.RemoveAt(5);            
+            menu.RemoveAt(menu.FindIndex(m => m.name == name));           
         }
     }
 }
