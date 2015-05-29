@@ -26,12 +26,42 @@ namespace UnitTestProject1
             f.price = 10;
             
 
-            meal = Menu.AddMeal(f);
+            Menu.AddMeal(meal, f);
             
 
             Assert.AreEqual(meal[0].name, "Картофель");
             Assert.AreEqual(meal[0].price, 10);
             
+        }
+
+        [TestMethod]
+        public void TestDeleteMeal()
+        {
+            Menu m = new Menu();
+            List<Food> meal = new List<Food>();
+            Food f;
+
+            for (int i = 0; i < 10; i++)
+            {
+                f = new Food();
+                f.name = "Картофель" + i;
+                f.price = 10 + i;
+                Menu.AddMeal(meal, f);
+
+            }
+
+            string name = "Картофель5";          
+
+            Menu.DeleteMeal(meal, name);
+
+            for (int i = 0; i < meal.Count; i++)
+            {
+                Assert.AreNotEqual(meal[i].name, "Картофель5");
+               
+
+            }
+            
+
         }
     }
 }

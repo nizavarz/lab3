@@ -22,10 +22,13 @@ namespace lab3
             InitializeComponent();
         }
 
-        public static List<Food> AddMeal(Food food){
-            List<Food> m = new List<Food>();
+        public static void AddMeal(List<Food> m, Food food){            
             m.Add(food);
-            return m;
+        }
+
+        public static void DeleteMeal(List<Food> menu, string name)
+        {
+            menu.RemoveAt(5);            
         }
     }
 }
