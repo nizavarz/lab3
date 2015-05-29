@@ -5,4 +5,7 @@ d:\lab3\lab3\obj\Debug\lab3.Properties.Resources.resources
 d:\lab3\lab3\obj\Debug\lab3.csproj.GenerateResource.Cache
 d:\lab3\lab3\obj\Debug\lab3.exe
 d:\lab3\lab3\obj\Debug\lab3.pdb
+d:\lab3\lab3\obj\Debug\lab3.Editor.resources
+d:\lab3\lab3\obj\Debug\lab3.Menu.resources
+d:\lab3\lab3\obj\Debug\lab3.FromSmeta.resources
 d:\lab3\lab3\obj\Debug\lab3.csprojResolveAssemblyReference.cache
