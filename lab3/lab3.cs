@@ -37,8 +37,8 @@ namespace lab3
         }
 
         public static void DeleteSmetaProduct(List<Smeta> smeta, string name)
-        {
-            smeta.RemoveAt(5);
+        {            
+            smeta.RemoveAt(smeta.FindIndex(m => m.smetaProduct.name == name));
         }
 
 
